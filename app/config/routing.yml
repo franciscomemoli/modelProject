@@ -1,0 +1,13 @@
+model:
+    resource: "@ModelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+report:
+    resource: "@ReportBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
