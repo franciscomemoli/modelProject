@@ -5,7 +5,7 @@ namespace ReportBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-
+use Lexik\Bundle\FormFilterBundle\Filter\FilterOperands;
 class LawFilterType extends AbstractType
 {
     /**
@@ -14,10 +14,12 @@ class LawFilterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        
-            ->add('name', 'filter_text')
-            ->add('description', 'filter_text')
-            ->add('applicationAuthority', 'filter_text')
+            ->add('name', 'filter_text',array(
+                    'condition_pattern' => FilterOperands::STRING_BOTH))
+            ->add('description', 'filter_text',array(
+                    'condition_pattern' => FilterOperands::STRING_BOTH))
+            ->add('applicationAuthority', 'filter_text',array(
+                    'condition_pattern' => FilterOperands::STRING_BOTH))
         ;
     }
 

@@ -1,0 +1,60 @@
+{% extends "base_bootstrap_3.html.twig" %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="row dashInfo">
+
+            <div class="col-sm-4 col-sm-offset-2 dashInfoItem">
+                    <div><i class="fa fa-user fa-6" style="font-size: 120px;"></i></div>
+                    <div class="dashInfoNumber">
+                        
+                    </div>
+            </div>
+            <div class="col-sm-4  dashInfoItem">
+                    <div><i class="fa fa-dollar" style="font-size: 120px;"></i></div>
+                    <div class="totalTime-dates"></div>
+                    <div class="dashInfoNumber">
+                        
+                        
+                    </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4 backdashOption">
+                <a class="btn btn-primary btn-block" href="{{ url('law') }}">
+                    <div><i class="fa fa-user"></i></div>
+                    {{ 'law'|trans }}
+                </a>
+            </div>
+            <div class="col-sm-4 backdashOption">
+                <a class="btn btn-danger btn-block" href="">
+                    <div><i class="fa  fa-dollar"></i></div>
+                    {{ 'Cuentas'|trans }}
+                </a>
+            </div>
+            <div class="col-sm-4 backdashOption">
+                <a class="btn btn-warning btn-block" href="">
+                    <div><i class="fa  fa-suitcase"></i></div>
+                    {{ 'Campaña IVR'|trans }}
+                </a>
+            </div>
+            <div class="col-sm-4 backdashOption">
+                <a class="btn btn-success btn-block" href="">
+                    <div><i class="fa  fa-send"></i></div>
+                    {{ 'Tarifas y destinos'|trans }}
+                </a>
+            </div>
+            <div class="col-sm-4 backdashOption">
+                <a class="btn btn-primary btn-block" href="">
+                    <div><i class="fa  fa-gift"></i></div>
+                    {{ 'Packs de creditos'|trans }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

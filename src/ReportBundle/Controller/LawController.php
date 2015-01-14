@@ -213,7 +213,6 @@ class LawController extends Controller
         $url = $this->generateUrl($route ?: $name, is_null($params) ? array() : $params);
         if ($request->query->has('submit-filter') && $form->handleRequest($request)->isValid()) {
             $request->getSession()->set('filter.' . $name, $request->query->get($form->getName()));
-
             return $this->redirect($url);
         } elseif ($request->query->has('reset-filter')) {
             $request->getSession()->set('filter.' . $name, null);
@@ -233,6 +232,7 @@ class LawController extends Controller
     protected function filter(FormInterface $form, QueryBuilder $qb, $name)
     {
         if (!is_null($values = $this->getFilter($name))) {
+
             if ($form->submit($values)->isValid()) {
                 $this->get('lexik_form_filter.query_builder_updater')->addFilterConditions($form, $qb);
             }

@@ -81,3 +81,6 @@ knp_paginator:
     template:
         pagination: Pagination/sliding_bootstrap_3.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+lexik_form_filter:
+    where_method: ~  # null | and | or
+    force_case_insensitivity: true
